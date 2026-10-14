@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Разговорник — эвенкийский язык</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app">
+    <header class="app-header">
+      <h1>Разговорник</h1>
+      <p class="progress hidden" id="progress"></p>
+    </header>
+
+    <section class="card" id="step-start">
+      <p class="step-label">Эвенкийский язык</p>
+      <p class="phrase">Тренировка фраз</p>
+      <div class="actions">
+        <button id="btn-start" class="btn btn-primary">Начать тренировку</button>
+      </div>
+    </section>
+
+    <section class="card hidden" id="step-1">
+      <p class="step-label">Знакомство с фразой</p>
+      <p class="phrase" id="phrase-russian-1"></p>
+      <p class="translation" id="phrase-evenki-1"></p>
+      <div class="actions">
+        <button id="btn-play-1" class="btn btn-play">Прослушать</button>
+        <button id="btn-next-1" class="btn btn-primary">Далее</button>
+      </div>
+    </section>
+
+    <section class="card hidden" id="step-2">
+      <p class="step-label">Выберите перевод на эвенкийский</p>
+      <p class="phrase" id="phrase-russian-2"></p>
+      <div class="options" id="options-2"></div>
+      <div class="actions">
+        <button id="btn-next-2" class="btn btn-primary" disabled>Далее</button>
+      </div>
+    </section>
+
+    <section class="card hidden" id="step-2b">
+      <p class="step-label">Соберите фразу из слов</p>
+      <p class="phrase" id="phrase-russian-2b"></p>
+      <div class="placeholder" id="placeholder"></div>
+      <p class="hint" id="puzzle-feedback"></p>
+      <div class="word-bank" id="word-bank"></div>
+      <div class="actions">
+        <button id="btn-next-2b" class="btn btn-primary" disabled>Далее</button>
+      </div>
+    </section>
+
+    <section class="card hidden" id="step-3">
+      <p class="step-label">Выберите перевод на русский</p>
+      <p class="phrase" id="phrase-evenki-3"></p>
+      <div class="actions">
+        <button id="btn-play-3" class="btn btn-play">Прослушать</button>
+      </div>
+      <div class="options" id="options-3"></div>
+      <div class="actions">
+        <button id="btn-next-3" class="btn btn-primary" disabled>Далее</button>
+      </div>
+    </section>
+
+    <section class="card hidden" id="step-finish">
+      <p class="step-label">Тренировка завершена</p>
+      <p class="phrase">Вы повторили все фразы</p>
+      <div class="actions">
+        <button id="btn-restart" class="btn btn-primary">Начать заново</button>
+      </div>
+    </section>
+
+    <p class="error hidden" id="error"></p>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
